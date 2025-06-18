@@ -12,7 +12,8 @@ async def root():
 
 
 @app.get("/scrape")
-async def scrap(background_tasks: BackgroundTasks):
-    
-    background_tasks.add_task(scrapper_free_games)
-    return {"message": "Scrapping started in the background."}
+def scrap():
+    result = scrapper_free_games()
+    if result is None:
+        return {"message": "No free games found or an error occurred."}
+    return {"message":result}
