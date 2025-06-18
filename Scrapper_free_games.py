@@ -91,5 +91,6 @@ def scrapper_free_games():
     else:
         print(f"Error while deleting data : {auto_delete_table_data.status_code}",auto_delete_table_data.text)
     driver.quit()
+    return json_data
 
 
