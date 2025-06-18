@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: fastapi-scraper
+    env: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: BASE_URL
+        value: https://your-api-endpoint.com

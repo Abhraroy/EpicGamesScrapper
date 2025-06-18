@@ -1,5 +1,5 @@
 from fastapi import FastAPI,BackgroundTasks
-from Scrapper_free_games import scrapper_free_games
+from app.Scrapper_free_games import scrapper_free_games
 
 
 app = FastAPI()
