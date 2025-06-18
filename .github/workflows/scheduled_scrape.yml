@@ -1,0 +1,15 @@
+name: Scheduled Scrape Trigger
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'  # Every 30 minutes UTC
+  workflow_dispatch:        # Allow manual trigger from GitHub
+
+jobs:
+  call-fastapi:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Make a GET request to FastAPI /scrape route
+        run: |
+          curl -X GET epicgamesscrapper-production.up.railway.app/scrape
