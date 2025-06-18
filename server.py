@@ -11,7 +11,7 @@ async def root():
 
 
 
-@app.get("/scrap")
+@app.get("/scrape")
 async def scrap(background_tasks: BackgroundTasks):
     
     background_tasks.add_task(scrapper_free_games)
