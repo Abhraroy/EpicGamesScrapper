@@ -4,6 +4,13 @@ from Scrapper_free_games import scrapper_free_games
 
 app = FastAPI()
 
+
+@app.get("/")
+async def root():
+    return {"message": "Welcome to the Epic Games Scraper API"}
+
+
+
 @app.get("/scrap")
 async def scrap(background_tasks: BackgroundTasks):
     
