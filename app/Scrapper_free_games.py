@@ -39,7 +39,7 @@ def scrapper_free_games():
     "Chrome/134.0.0.0 Safari/537.36"
     )
 
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+    driver = webdriver.Chrome(service=Service("/usr/bin/chromedriver"), options=options)
     driver.get(link)
 
 
