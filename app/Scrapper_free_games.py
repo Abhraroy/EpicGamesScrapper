@@ -63,7 +63,7 @@ def scrapper_free_games():
     for game in sp:
         game_obj={}
         game_obj["Game_name"] = game.find("div",class_="css-1p5cyzj-ROOT").find("h6").text
-        game_obj["Game_link"]=f"https://store.epicgames.com{game.find("a",class_="css-g3jcms").get("href")}"
+        game_obj["Game_link"]=f"https://store.epicgames.com{game.find('a',class_='css-g3jcms').get('href')}"
         game_obj["Game_status"]=game.find("div",class_=re.compile(r"css-(82y1uz|gyjcm9)")).text
         timeperiod = game.find_all("time")
         temp=[]
