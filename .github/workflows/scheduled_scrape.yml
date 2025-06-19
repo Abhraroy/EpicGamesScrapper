@@ -12,4 +12,4 @@ jobs:
     steps:
       - name: Make a GET request to FastAPI /scrape route
         run: |
-          curl -X GET epicgamesscrapper-production.up.railway.app/scrape
+          curl -X GET https://epicgamesscrapper.onrender.com/scrape
